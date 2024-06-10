@@ -336,22 +336,41 @@ class _AddListScreenState extends State<AddListScreen> {
                       Text('POINTS'),
                       TextField(
                         decoration: InputDecoration(
-                          hintText: '1000',
-                          border: OutlineInputBorder(),
+                          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: BorderSide(
+                              color: Colors.grey[100]!, // Set your desired border color
+                              width: 1.0, // Set your desired border width
+                            ),
+                          ),
                         ),
                       ),
                       SizedBox(height: 16),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Type here & Add Check List',
-                          suffixIcon: IconButton(
-                            icon: Icon(Icons.add),
-                            onPressed: () {
-                              // Add checklist item
-                            },
+                      Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Type here & Add Check List',
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
                           ),
-                          border: OutlineInputBorder(),
-                        ),
+                          SizedBox(width: 8.0), // Adds some space between the TextField and the IconButton
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.grey), // Adjust the border color
+                            ),
+                            child: IconButton(
+                              icon: Icon(Icons.add),
+                              onPressed: () {
+                                // Add checklist item
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(height: 16),
                       Column(
