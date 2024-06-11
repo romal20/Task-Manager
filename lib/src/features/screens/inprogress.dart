@@ -20,7 +20,7 @@ class _InProgressState extends State<InProgress> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.green),
           onPressed: () {
-            // Handle back action
+
           },
         ),
         title: Row(
@@ -33,13 +33,13 @@ class _InProgressState extends State<InProgress> {
             IconButton(
               icon: Icon(Icons.info_outline, color: Colors.green,size: 18,),
               onPressed: () {
-                // Handle info action
+
               },
             ),
             Spacer(),
             GestureDetector(
               onTap: () {
-                // Handle incident logs action
+
               },
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
@@ -73,7 +73,7 @@ class _InProgressState extends State<InProgress> {
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 600) {
-            // Tablet/Desktop layout
+
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -84,9 +84,9 @@ class _InProgressState extends State<InProgress> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CalendarSection(),
-                        //SizedBox(height: 16.0),
+
                         TaskOverviewSection(),
-                        //SizedBox(height: 16.0),
+
                       ],
                     ),
                   ),
@@ -99,7 +99,7 @@ class _InProgressState extends State<InProgress> {
               ),
             );
           } else {
-            // Mobile layout
+
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(

@@ -23,7 +23,7 @@ class _CalendarSectionState extends State<CalendarSection> {
               onPressed: () {
                 setState(() {
                   _selectedDate = DateTime(_selectedDate.year, _selectedDate.month - 1, _selectedDate.day);
-                  _selectedDayIndex = -1; // Reset the selected day index
+                  _selectedDayIndex = -1; 
                 });
               },
             ),
@@ -36,7 +36,7 @@ class _CalendarSectionState extends State<CalendarSection> {
               onPressed: () {
                 setState(() {
                   _selectedDate = DateTime(_selectedDate.year, _selectedDate.month + 1, _selectedDate.day);
-                  _selectedDayIndex = -1; // Reset the selected day index
+                  _selectedDayIndex = -1; 
                 });
               },
             ),
@@ -53,7 +53,7 @@ class _CalendarSectionState extends State<CalendarSection> {
                   if (selectedDate != null) {
                     setState(() {
                       _selectedDate = selectedDate;
-                      _selectedDayIndex = selectedDate.day - 1; // Update the selected day index
+                      _selectedDayIndex = selectedDate.day - 1; 
                     });
                   }
                 });

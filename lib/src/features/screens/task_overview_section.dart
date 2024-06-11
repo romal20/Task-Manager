@@ -36,7 +36,7 @@ class _TaskOverviewSectionState extends State<TaskOverviewSection> with SingleTi
     }
 
     if (_tabController.index == 0) {
-      Get.offAll(() => DashboardScreen()); // Navigate to the Task Overview Page
+      Get.offAll(() => DashboardScreen());
     } else {
       setState(() {
         selectedIndex = null;
@@ -81,7 +81,7 @@ class _TaskOverviewSectionState extends State<TaskOverviewSection> with SingleTi
           tabs: [
             GestureDetector(
               onTap: () {
-                Get.offAll(() => DashboardScreen()); // Navigate to the Task Overview Page
+                Get.offAll(() => DashboardScreen());
               },
               child: Tab(text: 'Task Overview', height: 40),
             ),
@@ -90,11 +90,11 @@ class _TaskOverviewSectionState extends State<TaskOverviewSection> with SingleTi
         ),
         SizedBox(height: 10.0),
         Container(
-          height: 100, // Adjust this height as needed
+          height: 100,
           child: TabBarView(
             controller: _tabController,
             children: [
-              // Task Overview Tab
+
               GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -191,8 +191,8 @@ class _TaskOverviewSectionState extends State<TaskOverviewSection> with SingleTi
                 },
               ),
 
-              // My SOP's Tab
-              Center(child: Text('My SOP\'s Content')), // Replace with actual content
+
+              Center(child: Text('My SOP\'s Content')),
             ],
           ),
         ),

@@ -212,7 +212,7 @@ class TaskCard extends StatelessWidget {
                     color: iconColor,
                     size: 30,
                   ),
-                ), //icon
+                ),
                 SizedBox(width: 5),
                 Expanded(
                   child: Column(
@@ -268,7 +268,7 @@ class TaskCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                ), //title and subtitle
+                ),
                 SizedBox(
                   width: 15,
                 ),
@@ -320,7 +320,7 @@ class TaskCard extends StatelessWidget {
                       fontSize: 15,
                       fontWeight: FontWeight.w500),
                 ),
-                //SizedBox(width: 25,),
+
                 Spacer(),
                 Text(
                   dateTime,
@@ -396,7 +396,7 @@ class TaskCard extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: Row(
                     mainAxisSize:
-                        MainAxisSize.min, // Ensure the Row takes minimum space
+                        MainAxisSize.min,
                     children: [
                       isDone
                           ? ElevatedButton.icon(
@@ -405,15 +405,15 @@ class TaskCard extends StatelessWidget {
                                 backgroundColor: Colors.grey,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      30), // circular border
+                                      30),
                                 ),
                               ),
                               icon: Icon(Icons.check_circle,
-                                  color: Colors.white), // icon in white
+                                  color: Colors.white),
                               label: Text('Done',
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18)), // text in white
+                                      fontSize: 18)),
                             )
                           : ElevatedButton.icon(
                               onPressed: () {},
@@ -421,41 +421,41 @@ class TaskCard extends StatelessWidget {
                                 backgroundColor: Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      30), // circular border
+                                      30),
                                   side: BorderSide(
                                       color: Colors.green,
-                                      width: 1), // green border
+                                      width: 1),
                                 ),
                               ),
                               icon: Icon(
                                 progress == 0.0
                                     ? Icons.play_circle_outline_outlined
                                     : Icons.check_circle_outline_rounded,
-                                color: Colors.green, // icon in green
+                                color: Colors.green,
                               ),
                               label: Text(
                                 progress == 0.0 ? 'Start' : 'Done',
                                 style: TextStyle(
                                     color: Colors.green,
-                                    fontSize: 18), // text in green
+                                    fontSize: 18),
                               ),
                             ),
-                      SizedBox(width: 5), // Add spacing between the buttons
+                      SizedBox(width: 5),
                       GestureDetector(
                         onTap: () {
-                          // Add functionality for the ABC button
+
                         },
                         child: Container(
-                          width: 35, // Set width
-                          height: 35, // Set height
+                          width: 35,
+                          height: 35,
                           decoration: BoxDecoration(
                             color: Colors
-                                .white, // Match the color of the Align button
+                                .white,
                             borderRadius:
-                                BorderRadius.circular(10), // Circular border
+                                BorderRadius.circular(10),
                             border: Border.all(
                                 color: isDone ? Colors.grey : Colors.green,
-                                width: 2), // Green border
+                                width: 2),
                           ),
                           child: Center(
                             child: Text(
@@ -465,7 +465,7 @@ class TaskCard extends StatelessWidget {
                                 color: isDone
                                     ? Colors.grey
                                     : Colors
-                                        .green, // Text color for the ABC button
+                                        .green,
                               ),
                             ),
                           ),
@@ -540,7 +540,7 @@ class StepConnector extends StatelessWidget {
         height: 2,
         color: isCompleted
             ? progressColor
-            : Colors.grey[300], // Use progress color when completed
+            : Colors.grey[300],
       ),
     );
   }
