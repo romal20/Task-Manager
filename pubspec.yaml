@@ -38,6 +38,8 @@ dependencies:
   intl: ^0.19.0
   get: ^4.6.6
   shared_preferences: ^2.2.3
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.11
 
 dev_dependencies:
   flutter_test:
@@ -93,3 +95,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/image/icon.png"
+
+flutter_native_splash:
+  android: true
+  ios: true
+
+  background_image: "assets/image/whiteBg.png"
+  image: "assets/image/logo.png"
